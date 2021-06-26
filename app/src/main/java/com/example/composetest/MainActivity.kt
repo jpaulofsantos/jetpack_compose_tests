@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -25,9 +27,15 @@ class MainActivity : ComponentActivity() {
                     .background(Color.Gray)
                     .fillMaxHeight(0.5f)
                     .fillMaxWidth()
-                    .padding(top = 16.dp)
+                    .border(5.dp, Color.Magenta)
+                    .padding(5.dp)
+                    .border(5.dp, Color.Blue)
+                    .padding(5.dp)
+                    .border(5.dp, Color.Red)
+                    .padding(10.dp)
             ) {
-                Text("Hello", modifier = Modifier.offset(0.dp, 20.dp)) //50dp to right and 20dp to bottom
+                Text("Hello", modifier = Modifier.clickable {
+                })
                 Spacer(modifier = Modifier.height(20.dp))
                 Text("JP")
             }
