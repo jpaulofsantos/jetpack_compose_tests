@@ -20,31 +20,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
-
-            Row(modifier = Modifier
-                .fillMaxSize(0.9f)
-                .background(Color.Green), verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceEvenly
-
+            Column(
+                modifier = Modifier
+                    .background(Color.Gray)
+                    .fillMaxHeight(0.5f)
+                    .fillMaxWidth()
+                    .padding(top = 16.dp)
             ) {
-                Text("Hello")
-                Text("World")
+                Text("Hello", modifier = Modifier.offset(0.dp, 20.dp)) //50dp to right and 20dp to bottom
+                Spacer(modifier = Modifier.height(20.dp))
                 Text("JP")
             }
-
-            Column(modifier = Modifier
-                .width(300.dp)
-                .height(300.dp)
-                .background(Color.Green), horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceEvenly
-
-            ) {
-                Text("Hello")
-                Text("World")
-                Text("JP")
-            }
-
         }
     }
 }
